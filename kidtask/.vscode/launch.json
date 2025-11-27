@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "KidTaskApp",
+            "request": "launch",
+            "mainClass": "kidtask.KidTaskApp",
+            "projectName": "kidtask_f755fc6a"
+        },
+        {
             "type": "jdk",
             "request": "launch",
             "name": "Launch Java App"
