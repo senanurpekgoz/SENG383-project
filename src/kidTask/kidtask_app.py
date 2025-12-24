@@ -195,27 +195,29 @@ class KidTaskApp:
                 return wish
         return None
     
-    def add_task(self, user: User) -> Task:
+    def add_task(self, title: str, description: str, due_date: datetime, 
+                 points: int, child_username: str, created_by: str) -> Task:
         """
-        Kullanıcıdan görev bilgilerini alarak yeni bir görev ekler.
+        Yeni bir görev ekler.
         
         Args:
-            user (User): Görevi ekleyen kullanıcı
+            title (str): Görevin başlığı
+            description (str): Görevin açıklaması
+            due_date (datetime): Görevin bitiş tarihi
+            points (int): Görevin puan değeri
+            child_username (str): Görevin atandığı çocuğun kullanıcı adı
+            created_by (str): Görevi oluşturan kullanıcı adı
             
         Returns:
             Task: Oluşturulan görev nesnesi
-            
-        Note:
-            Bu metod şu anda temel bir görev oluşturur. Gerçek uygulamada
-            kullanıcıdan input alınması gerekir.
         """
-        # Gerçek uygulamada burada kullanıcıdan input alınır
-        # Şimdilik örnek bir görev oluşturuyoruz
         new_task = Task(
-            title="Yeni Görev",
-            description="Görev açıklaması",
-            due_date=datetime.now(),
-            points=10
+            title=title,
+            description=description,
+            due_date=due_date,
+            points=points,
+            child_username=child_username,
+            created_by=created_by
         )
         self.tasks.append(new_task)
         return new_task
@@ -274,26 +276,27 @@ class KidTaskApp:
             print(f"Görev onaylandı. {child_username} kullanıcısına {task.points} puan eklendi.")
             print(f"Yeni toplam puan: {child_user.total_points}, Yeni seviye: {child_user.level}")
     
-    def add_wish(self, user: User) -> Wish:
+    def add_wish(self, description: str, cost: int, required_level: int,
+                 child_username: str, wish_type: str = "product") -> Wish:
         """
-        Kullanıcıdan dilek bilgilerini alarak yeni bir dilek ekler.
+        Yeni bir dilek ekler.
         
         Args:
-            user (User): Dileği ekleyen kullanıcı
+            description (str): Dileğin açıklaması
+            cost (int): Dileğin puan karşılığı (maliyeti)
+            required_level (int): Dileğin görülebilmesi için gereken minimum seviye
+            child_username (str): Dileği ekleyen çocuğun kullanıcı adı
+            wish_type (str): Dilek tipi ("product" veya "activity")
             
         Returns:
             Wish: Oluşturulan dilek nesnesi
-            
-        Note:
-            Bu metod şu anda temel bir dilek oluşturur. Gerçek uygulamada
-            kullanıcıdan input alınması gerekir.
         """
-        # Gerçek uygulamada burada kullanıcıdan input alınır
-        # Şimdilik örnek bir dilek oluşturuyoruz
         new_wish = Wish(
-            description="Yeni Dilek",
-            cost=50,
-            required_level=1
+            description=description,
+            cost=cost,
+            required_level=required_level,
+            child_username=child_username,
+            wish_type=wish_type
         )
         self.wishes.append(new_wish)
         return new_wish

@@ -1,0 +1,50 @@
+[
+  {
+    "task_id": 1,
+    "title": "Odanı Temizle",
+    "description": "Yatağını yap, oyuncaklarını topla",
+    "due_date": "2025-12-25T10:10:05.571952",
+    "points": 20,
+    "child_username": "ali",
+    "created_by": "parent1",
+    "is_completed": true,
+    "is_approved": false,
+    "rating": null
+  },
+  {
+    "task_id": 2,
+    "title": "Matematik Ödevi",
+    "description": "Sayfa 45-50 arası problemleri çöz",
+    "due_date": "2025-12-26T10:10:05.571961",
+    "points": 30,
+    "child_username": "ayse",
+    "created_by": "teacher1",
+    "is_completed": false,
+    "is_approved": false,
+    "rating": null
+  },
+  {
+    "task_id": 3,
+    "title": "ceren",
+    "description": "wdcfwscfwsf",
+    "due_date": "2025-12-24T10:21:12.361342",
+    "points": 10,
+    "child_username": "ali",
+    "created_by": "parent1",
+    "is_completed": true,
+    "is_approved": false,
+    "rating": null
+  },
+  {
+    "task_id": 4,
+    "title": "jhnıuhn",
+    "description": "uıhıun",
+    "due_date": "2025-12-24T10:46:49.276946",
+    "points": 10,
+    "child_username": "ali",
+    "created_by": "parent1",
+    "is_completed": false,
+    "is_approved": false,
+    "rating": null
+  }
+]

@@ -26,7 +26,9 @@ class Wish:
         description: str,
         cost: int,
         required_level: int = 1,
-        wish_id: Optional[int] = None
+        wish_id: Optional[int] = None,
+        child_username: Optional[str] = None,
+        wish_type: str = "product"  # "product" or "activity"
     ):
         """
         Wish sınıfının yapıcı metodu.
@@ -38,6 +40,8 @@ class Wish:
                                  Varsayılan: 1
             wish_id (Optional[int]): Dileğin benzersiz kimliği. 
                                     Belirtilmezse otomatik atanır.
+            child_username (Optional[str]): Dileği ekleyen çocuğun kullanıcı adı
+            wish_type (str): Dilek tipi ("product" veya "activity")
         """
         self.wish_id = wish_id if wish_id is not None else Wish._id_counter
         Wish._id_counter = max(Wish._id_counter, self.wish_id + 1)
@@ -45,6 +49,8 @@ class Wish:
         self.description = description
         self.cost = cost
         self.required_level = required_level
+        self.child_username = child_username
+        self.wish_type = wish_type
         self.is_approved = False
     
     def approve(self) -> None:
@@ -77,7 +83,9 @@ class Wish:
             'description': self.description,
             'cost': self.cost,
             'is_approved': self.is_approved,
-            'required_level': self.required_level
+            'required_level': self.required_level,
+            'child_username': self.child_username,
+            'wish_type': self.wish_type
         }
     
     @classmethod
@@ -95,7 +103,9 @@ class Wish:
             description=data['description'],
             cost=data['cost'],
             required_level=data.get('required_level', 1),
-            wish_id=data.get('wish_id')
+            wish_id=data.get('wish_id'),
+            child_username=data.get('child_username'),
+            wish_type=data.get('wish_type', 'product')
         )
         wish.is_approved = data.get('is_approved', False)
         return wish

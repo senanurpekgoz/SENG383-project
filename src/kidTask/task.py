@@ -32,7 +32,9 @@ class Task:
         description: str,
         due_date: datetime,
         points: int,
-        task_id: Optional[int] = None
+        task_id: Optional[int] = None,
+        child_username: Optional[str] = None,
+        created_by: Optional[str] = None
     ):
         """
         Task sınıfının yapıcı metodu.
@@ -44,6 +46,8 @@ class Task:
             points (int): Görevin puan değeri
             task_id (Optional[int]): Görevin benzersiz kimliği. 
                                     Belirtilmezse otomatik atanır.
+            child_username (Optional[str]): Görevin atandığı çocuğun kullanıcı adı
+            created_by (Optional[str]): Görevi oluşturan kullanıcı (Parent/Teacher)
         """
         self.task_id = task_id if task_id is not None else Task._id_counter
         Task._id_counter = max(Task._id_counter, self.task_id + 1)
@@ -52,6 +56,8 @@ class Task:
         self.description = description
         self.due_date = due_date
         self.points = points
+        self.child_username = child_username
+        self.created_by = created_by
         self.is_completed = False
         self.is_approved = False
         self.rating = None
@@ -91,6 +97,8 @@ class Task:
             'description': self.description,
             'due_date': self.due_date.isoformat(),
             'points': self.points,
+            'child_username': self.child_username,
+            'created_by': self.created_by,
             'is_completed': self.is_completed,
             'is_approved': self.is_approved,
             'rating': self.rating
@@ -112,7 +120,9 @@ class Task:
             description=data['description'],
             due_date=datetime.fromisoformat(data['due_date']),
             points=data['points'],
-            task_id=data.get('task_id')
+            task_id=data.get('task_id'),
+            child_username=data.get('child_username'),
+            created_by=data.get('created_by')
         )
         task.is_completed = data.get('is_completed', False)
         task.is_approved = data.get('is_approved', False)

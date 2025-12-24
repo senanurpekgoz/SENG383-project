@@ -1,0 +1,176 @@
+{
+  "note": "University Course Schedule Data (2024-2025 Fall) - Fixed time slots for common courses",
+  "department_groups": {
+    "CENG": {
+      "MATH157": ["G3", "G6"],
+      "MATH158": ["G2"],
+      "MATH205": ["G1"],
+      "MATH254": ["G1"],
+      "PHYS131": ["G5", "G6", "G7", "G8"],
+      "PHYS132": ["G1", "G2"],
+      "BIO101": ["G2"],
+      "ENG121": ["G1"],
+      "TURK101": ["G2"],
+      "HIST201": ["G2"]
+    },
+    "SENG": {
+      "MATH157": ["G2", "G5"],
+      "MATH158": ["G1"],
+      "MATH205": ["G2"],
+      "MATH223": ["G2"],
+      "PHYS131": ["G1", "G2", "G3", "G4"],
+      "PHYS132": ["G1", "G2"],
+      "BIO101": ["G3"],
+      "ENG121": ["G2"],
+      "TURK101": ["G1"],
+      "HIST201": ["G1"]
+    },
+    "MECH": {
+      "MATH157": ["G1", "G4"],
+      "MATH158": ["G1"],
+      "MATH253": ["G1"],
+      "MATH254": ["G2"],
+      "PHYS131": ["G9", "G10", "G11", "G12"],
+      "PHYS132": ["G1", "G2"],
+      "ENG121": ["G3"],
+      "TURK101": ["G1"],
+      "HIST201": ["G1"]
+    },
+    "IE": {
+      "MATH157": ["G1", "G4"],
+      "MATH158": ["G2"],
+      "MATH205": ["G1"],
+      "PHYS131": ["G9", "G10", "G11", "G12"],
+      "PHYS132": ["G1", "G2"],
+      "ENG121": ["G3"],
+      "TURK101": ["G1"],
+      "HIST201": ["G1"]
+    }
+  },
+  "fixed_schedule": {
+    "Monday": {
+      "09:20": {
+        "courses": [
+          {"code": "MATH157", "groups": ["G1", "G4"]},
+          {"code": "MATH158", "groups": ["G1"]},
+          {"code": "MATH205", "groups": ["G1"]},
+          {"code": "PHYS131", "type": "theory", "groups": ["G5", "G6", "G7", "G8"]}
+        ]
+      },
+      "11:20": {
+        "courses": [
+          {"code": "HIST201", "groups": ["G1", "G2"]},
+          {"code": "TURK101", "groups": ["G1", "G2"]}
+        ]
+      },
+      "13:20": {
+        "courses": [
+          {"code": "MATH157", "groups": ["G2", "G5"]},
+          {"code": "MATH158", "groups": ["G2"]},
+          {"code": "PHYS131", "type": "theory", "groups": ["G9", "G10", "G11", "G12"]}
+        ]
+      }
+    },
+    "Tuesday": {
+      "09:20": {
+        "courses": [
+          {"code": "MATH223", "groups": ["G1", "G2"]},
+          {"code": "PHYS132", "type": "theory", "groups": ["G1", "G2"]}
+        ]
+      },
+      "12:20": {
+        "courses": [
+          {"code": "TURK101", "groups": ["G3"]}
+        ]
+      },
+      "13:20": {
+        "courses": [
+          {"code": "MATH157", "groups": ["G3", "G6"]},
+          {"code": "CHEM103", "groups": ["G3", "G4"]}
+        ]
+      },
+      "15:20": {
+        "courses": [
+          {"code": "PHYS131", "type": "lab", "groups": ["G1", "G2"]}
+        ]
+      }
+    },
+    "Wednesday": {
+      "09:20": {
+        "courses": [
+          {"code": "MATH157", "groups": ["G1", "G4"]},
+          {"code": "MATH158", "groups": ["G1"]},
+          {"code": "MATH205", "groups": ["G2"]},
+          {"code": "BIO101", "groups": ["G2"]},
+          {"code": "PHYS131", "type": "theory", "groups": ["G1", "G2", "G3", "G4"]}
+        ]
+      },
+      "11:20": {
+        "courses": [
+          {"code": "CHEM103", "type": "lab", "groups": ["G1", "G2"]}
+        ]
+      },
+      "13:20": {
+        "courses": [
+          {"code": "MATH157", "groups": ["G2", "G5"]},
+          {"code": "MATH158", "groups": ["G2"]},
+          {"code": "PHYS131", "type": "theory", "groups": ["G9", "G10", "G11", "G12"]}
+        ]
+      },
+      "15:20": {
+        "courses": [
+          {"code": "PHYS131", "type": "lab", "groups": ["G7", "G8"]}
+        ]
+      }
+    },
+    "Thursday": {
+      "09:20": {
+        "courses": [
+          {"code": "MATH223", "groups": ["G1"]},
+          {"code": "MATH254", "groups": ["G1"]},
+          {"code": "PHYS131", "type": "theory", "groups": ["G5", "G6", "G7", "G8"]},
+          {"code": "HIST201", "groups": ["G3", "G4"]},
+          {"code": "CHEM103", "type": "lab", "groups": ["G3", "G4"]}
+        ]
+      },
+      "11:20": {
+        "courses": [
+          {"code": "TURK101", "groups": ["G4", "G5"]}
+        ]
+      },
+      "13:20": {
+        "courses": [
+          {"code": "MATH157", "groups": ["G3", "G6"]},
+          {"code": "MATH254", "groups": ["G2"]},
+          {"code": "PHYS131", "type": "theory", "groups": ["G1", "G2", "G3", "G4"]}
+        ]
+      },
+      "15:20": {
+        "courses": [
+          {"code": "PHYS131", "type": "lab", "groups": ["G9", "G10", "G11", "G12"]}
+        ]
+      }
+    },
+    "Friday": {
+      "09:20": {
+        "courses": [
+          {"code": "PHYS132", "type": "theory", "groups": ["G1", "G2"]}
+        ]
+      },
+      "11:20": {
+        "courses": [
+          {"code": "PHYS131", "type": "lab", "groups": ["G3", "G4"]}
+        ]
+      },
+      "13:20": {
+        "note": "Exam period - no courses"
+      },
+      "15:20": {
+        "courses": [
+          {"code": "PHYS131", "type": "lab", "groups": ["G3", "G4"]}
+        ]
+      }
+    }
+  }
+}
+

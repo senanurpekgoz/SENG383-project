@@ -1,0 +1,29 @@
+[
+  {
+    "wish_id": 1,
+    "description": "Yeni oyuncak araba",
+    "cost": 100,
+    "is_approved": false,
+    "required_level": 1,
+    "child_username": "ali",
+    "wish_type": "product"
+  },
+  {
+    "wish_id": 2,
+    "description": "Sinemaya gitmek",
+    "cost": 150,
+    "is_approved": false,
+    "required_level": 2,
+    "child_username": "ayse",
+    "wish_type": "activity"
+  },
+  {
+    "wish_id": 3,
+    "description": "cereb",
+    "cost": 50,
+    "is_approved": false,
+    "required_level": 1,
+    "child_username": "ali",
+    "wish_type": "product"
+  }
+]

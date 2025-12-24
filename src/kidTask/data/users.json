@@ -1,0 +1,28 @@
+[
+  {
+    "username": "ali",
+    "role": "Child",
+    "password": "1234",
+    "total_points": 0,
+    "level": 1,
+    "ratings": []
+  },
+  {
+    "username": "ayse",
+    "role": "Child",
+    "password": "1234",
+    "total_points": 0,
+    "level": 1,
+    "ratings": []
+  },
+  {
+    "username": "parent1",
+    "role": "Parent",
+    "password": "1234"
+  },
+  {
+    "username": "teacher1",
+    "role": "Teacher",
+    "password": "1234"
+  }
+]
